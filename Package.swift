@@ -3,12 +3,22 @@
 
 import PackageDescription
 
-let package = Package(name: "MyLibrary",
-                      platforms: [.iOS(.v9)],
-    products: [.library(name: "MyLibrary",
-            targets: ["MyLibrary"])
+let package = Package(
+    name: "SPMTest",
+    platforms: [.iOS(.v9)],
+    products: [
+        // Products define the executables and libraries a package produces, making them visible to other packages.
+        .library(
+            name: "SPMTest",
+            targets: ["SPMTest"]),
     ],
-    targets: [.target(name: "MyLibrary",
-                     publicHeadersPath: "")
+    targets: [
+        // Targets are the basic building blocks of a package, defining a module or a test suite.
+        // Targets can depend on other targets in this package and products from dependencies.
+        .target(
+            name: "SPMTest"),
+        .testTarget(
+            name: "SPMTestTests",
+            dependencies: ["SPMTest"]),
     ]
 )

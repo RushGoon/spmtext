@@ -1,7 +1,7 @@
 import XCTest
-@testable import MyLibrary
+@testable import SPMTest
 
-final class MyLibraryTests: XCTestCase {
+final class SPMTestTests: XCTestCase {
     func testExample() throws {
         // XCTest Documentation
         // https://developer.apple.com/documentation/xctest
